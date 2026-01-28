@@ -11,7 +11,7 @@ html {
     --visited-link-color: #551A8B;
     --breadcrumb-color-light: #1c1e22;
     --breadcrumb-color-dark: white;
-}
+}ƒ
 
 body {
     font-family: Arial, sans-serif;
@@ -280,7 +280,7 @@ body.dark-theme #golubinye-pastbisha-zemli-cover {
 
 /* Обложка для страницы «Нарративные стратегии художественной литературы как форма борьбы за&nbsp;уважительное отношение к&nbsp;нечеловеческим животным» в темной теме */
 body.dark-theme #narrativnye-strategii-hudozhestvennoj-literatury-cover {
-    content: url("https://cdn-ec-static.garagemca.org/storage/document/4/4/4487/file-d9bf032d-788d-4c6f-9ccf-d1b7dbb5f0d6.gif");
+    content: url("https://cdn-ec-static.garagemca.org/storage/document/4/5/4535/file-3b6bf076-b33b-4c35-8bd9-c11c84083435.gif");
 }
 
 /* Обложка для страницы «Мой сосед стриж» в темной теме */
@@ -305,7 +305,7 @@ body.dark-theme #smozhet-li-kino-razglyadet-zhivotnyh-cover {
 
 /* Обложка для страницы «Восстановление подавленого мира» в темной теме */
 body.dark-theme #vosstanovlenie-podavlennogo-mira-cover {
-    content: url("https://cdn-ec-static.garagemca.org/storage/document/4/5/4513/file-49067988-1f4f-4ca4-8863-6fad72e24162.gif");
+    content: url("https://cdn-ec-static.garagemca.org/storage/document/4/5/4547/file-8268f65e-0ba5-4f78-abb8-66c6eab8ae02.gif");
 }
 /*
 .right img {
@@ -388,7 +388,7 @@ body.dark-theme address .logo-img {
 .divider-img {
     width: auto;
     mix-blend-mode: multiply;
-    height: 280px;
+    height: 228px;
     max-width: 100%;  /* Ограничиваем ширину до 100% */
 }
 
@@ -429,35 +429,35 @@ body.dark-theme address .logo-img {
 
 /* Разные изображения для тёмной темы */
 body.dark-theme .divider-1 .divider-img {
-    content: url('https://cdn-ec-static.garagemca.org/storage/document/4/4/4483/file-4c50d005-ed9a-47ce-b9ba-41317b31a703.gif');
+    content: url('https://cdn-ec-static.garagemca.org/storage/document/4/5/4530/file-614a6278-d3fc-4ee5-acde-5b995cf0c870.gif');
 }
 
 body.dark-theme .divider-2 .divider-img {
-    content: url('https://cdn-ec-static.garagemca.org/storage/document/4/4/4489/file-89b1b9ea-bef1-4388-88e9-ea5059474c6c.gif');
+    content: url('https://cdn-ec-static.garagemca.org/storage/document/4/5/4533/file-7cb15677-1a4a-4dc1-bdcf-ec1a91b4ffb0.gif');
 }
 
 body.dark-theme .divider-3 .divider-img {
-    content: url('https://cdn-ec-static.garagemca.org/storage/document/4/4/4495/file-8941778e-a14f-473c-9f8e-56ed1ba12f4d.gif');
+    content: url('https://cdn-ec-static.garagemca.org/storage/document/4/5/4537/file-25e1092a-49c8-48da-909f-a9e3351515da.gif');
 }
 
 body.dark-theme .divider-4 .divider-img {
-    content: url('https://cdn-ec-static.garagemca.org/storage/document/4/5/4503/file-89a4f618-e311-4aa0-be5c-785b127e7740.gif');
+    content: url('https://cdn-ec-static.garagemca.org/storage/document/4/5/4539/file-3b179422-c6c1-4bac-9977-72be8b39aac5.gif');
 }
 
 body.dark-theme .divider-5 .divider-img {
-    content: url('https://cdn-ec-static.garagemca.org/storage/document/4/5/4507/file-a0116854-f508-4076-800d-42fc655eef56.gif');
+    content: url('https://cdn-ec-static.garagemca.org/storage/document/4/5/4541/file-80e5a7f8-7e82-4ec8-bc57-c5dc7ce60907.gif');
 }
 
 body.dark-theme .divider-6 .divider-img {
-    content: url('https://cdn-ec-static.garagemca.org/storage/document/4/5/4511/file-ecb4216d-7e97-4496-ac44-0ca9f16d94d2.gif');
+    content: url('https://cdn-ec-static.garagemca.org/storage/document/4/5/4543/file-bb199f26-c738-476b-8fbb-a30a80c6c0b1.gif');
 }
 
 body.dark-theme .divider-7 .divider-img {
-    content: url('https://cdn-ec-static.garagemca.org/storage/document/4/5/4515/file-968cd769-5b31-44c1-a54c-d431c31a2163.gif');
+    content: url('https://cdn-ec-static.garagemca.org/storage/document/4/5/4545/file-9ba19cc5-2ec2-4f13-b156-99f5f0fb4f06.gif');
 }
 
 body.dark-theme .divider-8 .divider-img {
-    content: url('https://cdn-ec-static.garagemca.org/storage/document/3/2/3273/file-d87e351e-6be4-466a-8406-fc7f21c4591b.png');
+    content: url('https://cdn-ec-static.garagemca.org/storage/document/4/5/4549/file-41466c52-fbeb-4f72-9617-77aaa2db414b.gif');
 }
 
 /* Мобилка */
@@ -495,8 +495,9 @@ body.dark-theme .divider-8 .divider-img {
         position: fixed;
         top: 0;
         right: 0;
+        width: auto;
         max-width: 46vw;
-        height: auto;
+        Sheight: auto;
         object-fit: contain;
         display: block;
         mix-blend-mode: multiply;
