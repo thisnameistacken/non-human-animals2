@@ -1,20 +1,47 @@
 html {
-    font-family: 'Vereyamod', sans-serif;
     font-size: 135%;
-    
-    /* Определяем CSS-переменные для цветов */
-    --background-light: #f2f1ee;
-    --background-dark: #1c1e22;
-    --text-light: black;
-    --text-dark: white;
-    --link-color: #0021F5;
-    --visited-link-color: #551A8B;
-    --breadcrumb-color-light: #1c1e22;
-    --breadcrumb-color-dark: white;
-}ƒ
+}
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'ArialPro', Arial, sans-serif;
+    font-weight: 100;
+    font-size: 1rem;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Light (обычный) */
+@font-face {
+    font-family: 'ArialPro';
+    src: url('font/ArialProLightfont.woff') format('woff');
+    font-weight: 100; /* Light */
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Light Italic */
+@font-face {
+    font-family: 'ArialPro';
+    src: url('font/ArialProLightItalicfont.woff') format('woff');
+    font-weight: 100; /* Light */
+    font-style: italic;
+    font-display: swap;
+}
+    
+    /* Определяем CSS-переменные для цветов */
+:root {
+    --background-light: #f2f1ee;
+    --background-dark: #1c1e22;
+
+    --text-light: #000000;
+    --text-dark: #ffffff;
+    /*--link-color-light: #0021F5;
+    --visited-link-color-light: #551A8B;
+    --link-color-dark: #6B8CFF;
+    --visited-link-color-dark: #9A7BFF;*/
+    --breadcrumb-color-light: #1c1e22;
+    --breadcrumb-color-dark: #ffffff;
 }
 
 @font-face {
@@ -116,21 +143,6 @@ body.dark-theme .subheading {
 .breadcrumb {
     font-size: 0.875rem;  /* Размер меньше основного текста */
     font-style: italic;   /* Курсив */
-}
-
-/* Общие стили для всех ссылок */
-a, .breadcrumb a {
-    color: var(--link-color);        /* Цвет ссылок */
-    text-decoration: underline; /* Подчеркивание ссылок */
-}
-
-/* Стили для непосещенных и посещенных ссылок */
-a:link {
-    color: var(--link-color); /* Цвет для непосещенных ссылок */
-}
-
-a:visited {
-    color: var(--visited-link-color); /* Цвет для посещенных ссылок */
 }
 
 /* Стили для навигации (хлебные крошки) */
@@ -270,57 +282,44 @@ body:not(.dark-theme) nav ol li:last-child {
 
 /* Обложка для страницы «Введение» в темной теме */
 body.dark-theme #index-cover {
-    content: url("https://cdn-ec-static.garagemca.org/storage/document/4/4/4479/file-15f36ed5-e1d1-42fc-bd2f-e0f36fc0aefd.gif");
+    content: url("https://cdn-ec-static.garagemca.org/storage/document/4/5/4554/file-633de9d4-c327-424d-b2d8-a2ad8d99bbd9.gif");
 }
 
 /* Обложка для страницы «Голубинные пастбища земли» в темной теме */
 body.dark-theme #golubinye-pastbisha-zemli-cover {
-    content: url("https://cdn-ec-static.garagemca.org/storage/document/4/4/4481/file-a0b104a1-bbda-450b-8151-a21e815761ae.gif");
+    content: url("https://cdn-ec-static.garagemca.org/storage/document/4/5/4558/file-dd87174d-340b-4fe4-9fc6-e789ae5cab0b.gif");
 }
 
 /* Обложка для страницы «Нарративные стратегии художественной литературы как форма борьбы за&nbsp;уважительное отношение к&nbsp;нечеловеческим животным» в темной теме */
 body.dark-theme #narrativnye-strategii-hudozhestvennoj-literatury-cover {
-    content: url("https://cdn-ec-static.garagemca.org/storage/document/4/5/4535/file-3b6bf076-b33b-4c35-8bd9-c11c84083435.gif");
+    content: url("https://cdn-ec-static.garagemca.org/storage/document/4/5/4562/file-40ddb308-ab18-4b59-8407-eed3fabeec84.gif");
 }
 
 /* Обложка для страницы «Мой сосед стриж» в темной теме */
 body.dark-theme #moj-sosed-strizh-cover {
-    content: url("https://cdn-ec-static.garagemca.org/storage/document/4/4/4493/file-b8953753-3c46-4310-8c87-9609d93a4e76.gif");
+    content: url("https://cdn-ec-static.garagemca.org/storage/document/4/5/4566/file-c90ae766-6b3f-4078-84c7-d1a6d8770893.gif");
 }
 
 /* Обложка для страницы «На другом месте» в темной теме */
 body.dark-theme #na-drugom-meste-cover {
-    content: url("https://cdn-ec-static.garagemca.org/storage/document/4/5/4501/file-05d289a0-fa50-4a0e-9c41-6163cab00675.gif");
+    content: url("https://cdn-ec-static.garagemca.org/storage/document/4/5/4570/file-2d3b6af3-6a04-4cc5-b49f-ca11f0b1fe0c.gif");
 }
 
 /* Обложка для страницы «Где спит рыбка» в темной теме */
 body.dark-theme #gde-spit-rybka-cover {
-    content: url("https://cdn-ec-static.garagemca.org/storage/document/4/5/4505/file-f3a21ed5-9761-414a-90a2-a10950277e97.gif");
+    content: url("https://cdn-ec-static.garagemca.org/storage/document/4/5/4574/file-e81141ec-a77b-4ea4-9850-cf6848216089.gif");
 }
 
 /* Обложка для страницы «(С)может ли кино разглядеть животных?» в темной теме */
 body.dark-theme #smozhet-li-kino-razglyadet-zhivotnyh-cover {
-    content: url("https://cdn-ec-static.garagemca.org/storage/document/4/5/4509/file-b0a0ba48-0bb5-4b2a-b151-c9e9af443e6e.gif");
+    content: url("https://cdn-ec-static.garagemca.org/storage/document/4/5/4578/file-3e3e570b-6c31-4649-a2d3-6554a5971454.gif");
 }
 
 /* Обложка для страницы «Восстановление подавленого мира» в темной теме */
 body.dark-theme #vosstanovlenie-podavlennogo-mira-cover {
-    content: url("https://cdn-ec-static.garagemca.org/storage/document/4/5/4547/file-8268f65e-0ba5-4f78-abb8-66c6eab8ae02.gif");
+    content: url("https://cdn-ec-static.garagemca.org/storage/document/4/5/4582/file-b89bb349-a8a6-49cc-bfbe-6be29e49eb11.gif");
 }
-/*
-.right img {
-    position: fixed;
-    top: 0;
-    right: 0; /* или left: 50% *//*
-    max-width: 40vw;
-    height: auto;
-    object-fit: contain;
-    display: block;
-    mix-blend-mode: multiply;
-    background-color: var(--background-light);
-    z-index: 1;
-}
-*/
+
 
 .right img {
     position: static;        /* БАЗА */
@@ -378,25 +377,35 @@ body.dark-theme address .logo-img {
 }
 
 /* Общие стили для всех разделителей */
-.divider-section {
+/*.divider-section {
     display: flex;
-    justify-content: center; /* Центрируем изображение */
+    justify-content: center;
     align-items: center;
     width: 100%;
-}
+}*/
 
+.divider-section {
+    max-width: 46vw;
+    margin: 0 auto;
+}
 .divider-img {
-    width: auto;
+    width: 100%;
     mix-blend-mode: multiply;
-    height: 228px;
-    max-width: 100%;  /* Ограничиваем ширину до 100% */
+    height: auto;
 }
 
 /* Адаптивный дизайн для мобильных устройств */
+:root {
+    --visual-width: 46vw;
+}
+
+.divider-section {
+    max-width: var(--visual-width);
+}
+
 @media (max-width: 768px) {
-    .divider-img {
-        width: 50%;
-        height: auto;
+    :root {
+        --visual-width: 100%;
     }
 }
 
@@ -429,35 +438,35 @@ body.dark-theme address .logo-img {
 
 /* Разные изображения для тёмной темы */
 body.dark-theme .divider-1 .divider-img {
-    content: url('https://cdn-ec-static.garagemca.org/storage/document/4/5/4530/file-614a6278-d3fc-4ee5-acde-5b995cf0c870.gif');
+    content: url('https://cdn-ec-static.garagemca.org/storage/document/4/5/4556/file-b31851d0-b80e-4725-8a46-d6598d12a4ab.gif');
 }
 
 body.dark-theme .divider-2 .divider-img {
-    content: url('https://cdn-ec-static.garagemca.org/storage/document/4/5/4533/file-7cb15677-1a4a-4dc1-bdcf-ec1a91b4ffb0.gif');
+    content: url('https://cdn-ec-static.garagemca.org/storage/document/4/5/4560/file-a98e1faf-7379-424a-ad70-0ddb7bf88dee.gif');
 }
 
 body.dark-theme .divider-3 .divider-img {
-    content: url('https://cdn-ec-static.garagemca.org/storage/document/4/5/4537/file-25e1092a-49c8-48da-909f-a9e3351515da.gif');
+    content: url('https://cdn-ec-static.garagemca.org/storage/document/4/5/4564/file-f246b219-5ab7-428a-b077-d9f94ba6cc5a.gif');
 }
 
 body.dark-theme .divider-4 .divider-img {
-    content: url('https://cdn-ec-static.garagemca.org/storage/document/4/5/4539/file-3b179422-c6c1-4bac-9977-72be8b39aac5.gif');
+    content: url('https://cdn-ec-static.garagemca.org/storage/document/4/5/4568/file-ec95ffb4-2ea6-4c60-b916-e9a98fba2bab.gif');
 }
 
 body.dark-theme .divider-5 .divider-img {
-    content: url('https://cdn-ec-static.garagemca.org/storage/document/4/5/4541/file-80e5a7f8-7e82-4ec8-bc57-c5dc7ce60907.gif');
+    content: url('https://cdn-ec-static.garagemca.org/storage/document/4/5/4572/file-29d4edb2-0b09-4800-b035-819431f5cb39.gif');
 }
 
 body.dark-theme .divider-6 .divider-img {
-    content: url('https://cdn-ec-static.garagemca.org/storage/document/4/5/4543/file-bb199f26-c738-476b-8fbb-a30a80c6c0b1.gif');
+    content: url('https://cdn-ec-static.garagemca.org/storage/document/4/5/4576/file-7d96dd4a-dc0a-445f-85e0-a79926995efd.gif');
 }
 
 body.dark-theme .divider-7 .divider-img {
-    content: url('https://cdn-ec-static.garagemca.org/storage/document/4/5/4545/file-9ba19cc5-2ec2-4f13-b156-99f5f0fb4f06.gif');
+    content: url('https://cdn-ec-static.garagemca.org/storage/document/4/5/4580/file-689622a7-6f1e-4991-98ed-0a26feddb8a6.gif');
 }
 
 body.dark-theme .divider-8 .divider-img {
-    content: url('https://cdn-ec-static.garagemca.org/storage/document/4/5/4549/file-41466c52-fbeb-4f72-9617-77aaa2db414b.gif');
+    content: url('https://cdn-ec-static.garagemca.org/storage/document/4/5/4584/file-4f03f9df-9c4d-4602-9a2f-838ae0fffb44.gif');
 }
 
 /* Мобилка */
@@ -497,7 +506,7 @@ body.dark-theme .divider-8 .divider-img {
         right: 0;
         width: auto;
         max-width: 46vw;
-        Sheight: auto;
+        height: auto;
         object-fit: contain;
         display: block;
         mix-blend-mode: multiply;
@@ -510,3 +519,26 @@ body.dark-theme .divider-8 .divider-img {
         max-width: 100%;
         height: auto;
     }
+
+    a,
+a:link {
+    color: var(--link-color);
+}
+
+a:visited {
+    color: var(--visited-link-color);
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+:root {
+    --link-color: #0021F5;
+    --visited-link-color: #551A8B;
+}
+
+body.dark-theme {
+    --link-color: #6B8CFF;
+    --visited-link-color: #9A7BFF;
+}
