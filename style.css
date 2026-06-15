@@ -2,46 +2,20 @@ html {
     font-size: 135%;
 }
 
-body {
-    font-family: 'ArialPro', Arial, sans-serif;
-    font-weight: 100;
-    font-size: 1rem;
-
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-/* Light (обычный) */
 @font-face {
-    font-family: 'ArialPro';
-    src: url('font/ArialProLightfont.woff') format('woff');
-    font-weight: 100; /* Light */
+    font-family: 'ArialNovaLight';
+    src: url('font/ArialNovaLight.woff') format('woff');
+    font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
 
-/* Light Italic */
 @font-face {
-    font-family: 'ArialPro';
-    src: url('font/ArialProLightItalicfont.woff') format('woff');
-    font-weight: 100; /* Light */
+    font-family: 'ArialNovaLight';
+    src: url('font/ArialNovaLightItalic.woff') format('woff');
+    font-weight: 300;
     font-style: italic;
     font-display: swap;
-}
-    
-    /* Определяем CSS-переменные для цветов */
-:root {
-    --background-light: #f2f1ee;
-    --background-dark: #1c1e22;
-
-    --text-light: #000000;
-    --text-dark: #ffffff;
-    /*--link-color-light: #0021F5;
-    --visited-link-color-light: #551A8B;
-    --link-color-dark: #6B8CFF;
-    --visited-link-color-dark: #9A7BFF;*/
-    --breadcrumb-color-light: #1c1e22;
-    --breadcrumb-color-dark: #ffffff;
 }
 
 @font-face {
@@ -49,103 +23,131 @@ body {
     src: url('font/Vereyamod-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-    font-display: swap; /* ускоряет отображение текста */
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Vereyamod';
     src: url('font/Vereyamod-Bold.woff') format('woff');
-    font-weight: bold;     /* жирная версия */
+    font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
 
-.heading-vereia {
-    font-family: 'Vereyamod', sans-serif;
-}
-
-.text-vereia {
-    font-family: 'Vereyamod', sans-serif;
-}
-
-body {
-    background-color: var(--background-light);
-    color: var(--text-light);
-}
-
-/* Темная тема для ручного переключения */
-body.dark-theme {
-    background-color: var(--background-dark);
-    color: var(--text-dark);
-}
-
-/* Темная тема для устройств с темной схемой */
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: var(--background-dark);
-        color: var(--text-dark);
-    }
-}
-
-/* Светлая тема для ручного переключения */
-body.light-theme {
-    background-color: var(--background-light);
-    color: var(--text-light);
-}
-
-/* Логотип для светлой темы (по умолчанию в HTML) */
-
-/* Логотип для темной темы через класс .dark-theme */
-body.dark-theme #logo {
-    content: url("images/B.gif");
-}
-
-/* Медиа-запрос для устройств с темной темой, если нет ручного переключения */
-@media (prefers-color-scheme: dark) {
-    body:not(.dark-theme) #logo {
-        content: url("images/B.gif");
-    }
-}
-
-/* Логотип для светлой темы при ручном переключении */
-body.light-theme #logo {
-    content: url("images/W.gif");
+:root {
+    --background-light: #f2f1ee;
+    --background-dark: #1c1e22;
+    --text-light: #000000;
+    --text-dark: #ffffff;
+    --breadcrumb-color-light: #1c1e22;
+    --breadcrumb-color-dark: #ffffff;
+    --link-color: #0021F5;
+    --visited-link-color: #551A8B;
+    --visual-width: 46vw;
 }
 
 * {
     box-sizing: border-box;
 }
 
-h1 {
-    margin-bottom: 0.2em; /* Отступ после h1 */
-    line-height: 1; /* уменьшает межстрочное расстояние */
+body {
+    font-family: 'ArialNovaLight', sans-serif;
+    font-weight: 300;
+    background-color: var(--background-light);
+    color: var(--text-light);
 }
 
-.subheading {
-    margin-top: 0;        /* Отступ сверху для h2 */
-    font-size: 1.2em;     /* Размер шрифта */
-    font-weight: normal;  /* Жирность */
-    font-style: italic;   /* Курсив */
-    color: #555;        /* Цвет */
+body.dark-theme {
+    --link-color: #6B8CFF;
+    --visited-link-color: #9A7BFF;
+    background-color: var(--background-dark);
+    color: var(--text-dark);
+}
+
+body.light-theme {
+    background-color: var(--background-light);
+    color: var(--text-light);
 }
 
 @media (prefers-color-scheme: dark) {
-    .subheading {
-        color: #aaa;      /* Светло-серый цвет для темной темы */
+    body:not(.light-theme) {
+        --link-color: #6B8CFF;
+        --visited-link-color: #9A7BFF;
+        background-color: var(--background-dark);
+        color: var(--text-dark);
+    }
+
+    body:not(.light-theme) #logo {
+        content: url("images/B.gif");
+    }
+
+    body:not(.light-theme) .subheading {
+        color: #aaa;
     }
 }
 
-/* Или для ручного переключателя темы */
+body.dark-theme #logo {
+    content: url("images/B.gif");
+}
+
+body.light-theme #logo {
+    content: url("images/W.gif");
+}
+
+body.dark-theme .right img,
+body.dark-theme .divider-img {
+    mix-blend-mode: screen;
+}
+
+body.dark-theme address .logo-img {
+    mix-blend-mode: screen;
+    background-color: var(--background-dark);
+}
+
+.heading-vereia,
+.text-vereia {
+    font-family: 'Vereyamod', sans-serif;
+}
+
+.is-bold {
+    font-weight: bold;
+}
+
+h1 {
+    margin-bottom: 0.2em;
+    line-height: 1;
+}
+
+.subheading {
+    margin-top: 0;
+    font-size: 1.2em;
+    font-weight: normal;
+    font-style: italic;
+    color: #555;
+}
+
 body.dark-theme .subheading {
-    color: #aaa;          /* Светло-серый цвет для темной темы */
+    color: #aaa;
+}
+
+a,
+a:link {
+    color: var(--link-color);
+}
+
+a:visited {
+    color: var(--visited-link-color);
+}
+
+a:hover {
+    opacity: 0.8;
 }
 
 .breadcrumb {
-    font-size: 0.875rem;  /* Размер меньше основного текста */
-    font-style: italic;   /* Курсив */
+    font-size: 0.875rem;
+    font-style: italic;
 }
 
-/* Стили для навигации (хлебные крошки) */
 nav ol {
     padding: 0;
     margin: 0;
@@ -156,45 +158,50 @@ nav ol li {
     display: inline;
 }
 
-/* Стили для текущего элемента без ссылки */
 nav ol li:last-child {
-    color: inherit; /* Цвет текущего элемента по умолчанию */
+    color: inherit;
 }
 
-/* Разделитель по умолчанию */
 nav ol li:not(:last-child)::after {
     content: " / ";
     padding: 0 5px;
-    color: var(--breadcrumb-color-light); /* Цвет разделителя по умолчанию */
+    color: var(--breadcrumb-color-light);
 }
 
-/* Цвет разделителя и текущего элемента для темной темы */
-body.dark-theme nav ol li:not(:last-child)::after {
-    color: var(--breadcrumb-color-dark); /* Цвет разделителя для темной темы */
-}
-
+body.dark-theme nav ol li:not(:last-child)::after,
 body.dark-theme nav ol li:last-child {
-    color: var(--breadcrumb-color-dark); /* Цвет для текущей страницы в темной теме */
+    color: var(--breadcrumb-color-dark);
 }
 
-body.dark-theme .right img,
-body.dark-theme .divider-img {
-    mix-blend-mode: screen;
-}
-
-/* Цвет разделителя и текущего элемента для светлой темы */
-body:not(.dark-theme) nav ol li:not(:last-child)::after {
-    color: var(--breadcrumb-color-light); /* Цвет разделителя для светлой темы */
-}
-
+body:not(.dark-theme) nav ol li:not(:last-child)::after,
 body:not(.dark-theme) nav ol li:last-child {
-    color: var(--breadcrumb-color-light); /* Цвет для текущей страницы в светлой теме */
+    color: var(--breadcrumb-color-light);
 }
 
 .container {
     display: flex;
     width: 100%;
     overflow-x: hidden;
+}
+
+.left,
+.right {
+    width: 50%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.right img {
+    position: static;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    margin-right: 10px;
+    mix-blend-mode: multiply;
 }
 
 .two-column-section {
@@ -204,75 +211,11 @@ body:not(.dark-theme) nav ol li:last-child {
 }
 
 .two-column-section > div {
-    width: 48%; /* Устанавливаем ширину для обоих столбцов */
+    width: 48%;
 }
 
 .two-column-section p {
-    margin: 0 0 1em 0; /* Отступы между абзацами */
-}
-
-.monospace-text {
-    font-family: monospace;
-}
-
-/* Адаптивный дизайн для мобильных устройств */
-@media (max-width: 768px) {
-    .right img {
-        position: static;
-        max-width: 100%;
-        height: auto;
-        mix-blend-mode: multiply; /* или normal, если нужно отключить */
-    }
-
-    .right {
-        width: 100%;
-    }
-
-    .container {
-        flex-direction: column-reverse;
-    }
-
-    .left, .right {
-        width: 100%;
-    }
-}
-
-@media (min-width: 769px) {
-    .right img {
-        position: fixed;      /* фиксируем GIF */
-        top: 0;               /* отступ от верха */
-        right: 10px;            /* справа */
-        max-width: 40vw;      /* ширина относительно viewport */
-        height: auto;         /* сохраняем пропорции */
-        object-fit: contain;  /* изображение в контейнер */
-        display: block;
-        mix-blend-mode: multiply; /* blending */
-        background-color: var(--background-light); /* для blending */
-        z-index: 10;          /* поверх остального контента */
-    }
-}
-
-    .right {
-        width: 100%;
-    }
-
-.left, .right {
-    width: 50%;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-
-.right {
-    width: 50%;
-    padding: 10px;
-}
-
-.third {
-    padding: 10px;
-    text-align: left;
+    margin: 0 0 1em 0;
 }
 
 .limited-img {
@@ -280,54 +223,25 @@ body:not(.dark-theme) nav ol li:last-child {
     height: auto;
 }
 
-/* Обложка для страницы «Введение» в темной теме */
-body.dark-theme #index-cover {
-    content: url("https://cdn-ec-static.garagemca.org/storage/document/4/5/4554/file-633de9d4-c327-424d-b2d8-a2ad8d99bbd9.gif");
-}
-
-/* Обложка для страницы «Голубинные пастбища земли» в темной теме */
-body.dark-theme #golubinye-pastbisha-zemli-cover {
-    content: url("https://cdn-ec-static.garagemca.org/storage/document/4/5/4558/file-dd87174d-340b-4fe4-9fc6-e789ae5cab0b.gif");
-}
-
-/* Обложка для страницы «Нарративные стратегии художественной литературы как форма борьбы за&nbsp;уважительное отношение к&nbsp;нечеловеческим животным» в темной теме */
-body.dark-theme #narrativnye-strategii-hudozhestvennoj-literatury-cover {
-    content: url("https://cdn-ec-static.garagemca.org/storage/document/4/5/4562/file-40ddb308-ab18-4b59-8407-eed3fabeec84.gif");
-}
-
-/* Обложка для страницы «Мой сосед стриж» в темной теме */
-body.dark-theme #moj-sosed-strizh-cover {
-    content: url("https://cdn-ec-static.garagemca.org/storage/document/4/5/4566/file-c90ae766-6b3f-4078-84c7-d1a6d8770893.gif");
-}
-
-/* Обложка для страницы «На другом месте» в темной теме */
-body.dark-theme #na-drugom-meste-cover {
-    content: url("https://cdn-ec-static.garagemca.org/storage/document/4/5/4570/file-2d3b6af3-6a04-4cc5-b49f-ca11f0b1fe0c.gif");
-}
-
-/* Обложка для страницы «Где спит рыбка» в темной теме */
-body.dark-theme #gde-spit-rybka-cover {
-    content: url("https://cdn-ec-static.garagemca.org/storage/document/4/5/4574/file-e81141ec-a77b-4ea4-9850-cf6848216089.gif");
-}
-
-/* Обложка для страницы «(С)может ли кино разглядеть животных?» в темной теме */
-body.dark-theme #smozhet-li-kino-razglyadet-zhivotnyh-cover {
-    content: url("https://cdn-ec-static.garagemca.org/storage/document/4/5/4578/file-3e3e570b-6c31-4649-a2d3-6554a5971454.gif");
-}
-
-/* Обложка для страницы «Восстановление подавленого мира» в темной теме */
-body.dark-theme #vosstanovlenie-podavlennogo-mira-cover {
-    content: url("https://cdn-ec-static.garagemca.org/storage/document/4/5/4582/file-b89bb349-a8a6-49cc-bfbe-6be29e49eb11.gif");
-}
-
-
-.right img {
-    position: static;        /* БАЗА */
+section img {
     max-width: 100%;
     height: auto;
+}
+
+.image-with-credit {
+    max-width: 100%;
+}
+
+.divider-section {
+    max-width: var(--visual-width);
+    margin: 0 auto;
+}
+
+.divider-img {
     display: block;
-    object-fit: contain;
-    margin-right: 10px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
     mix-blend-mode: multiply;
 }
 
@@ -337,9 +251,9 @@ footer {
 
 address {
     display: flex;
-    flex-direction: column; /* столбец */
+    flex-direction: column;
     align-items: flex-start;
-    gap: 10px; /* отступ между текстом и логотипом */
+    gap: 10px;
 }
 
 address p {
@@ -352,91 +266,47 @@ address .logo-img {
     mix-blend-mode: multiply;
 }
 
-/* Темная тема */
-body.dark-theme address .logo-img {
-    mix-blend-mode: screen; /* или lighten */
+.logo-link {
+    display: inline-block;
 }
 
-/* Темная тема */
-body.dark-theme address .logo-img {
-    background-color: var(--background-dark); /* фон для темной темы */
+.logo-wrapper {
+    display: inline-flex;
+    align-items: flex-start;
 }
 
-/* Адаптивный дизайн для мобильных устройств */
-@media (max-width: 768px) {
-    address {
-        flex-direction: column; /* Элементы располагаются в колонку на мобильных */
-        align-items: flex-start; /* Выравнивание по левому краю */
-    }
-
-    address img {
-        max-width: 100%; /* Изображение на всю ширину на мобильных */
-        margin-top: 20px; /* Добавляем отступ сверху для изображения */
-        align-items: flex-start; /* Выравнивание по левому краю */
-    }
+body.dark-theme #index-cover {
+    content: url("https://cdn-ec-static.garagemca.org/storage/document/4/5/4554/file-633de9d4-c327-424d-b2d8-a2ad8d99bbd9.gif");
 }
 
-/* Общие стили для всех разделителей */
-/*.divider-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}*/
-
-.divider-section {
-    max-width: 46vw;
-    margin: 0 auto;
-}
-.divider-img {
-    width: 100%;
-    mix-blend-mode: multiply;
-    height: auto;
+body.dark-theme #golubinye-pastbisha-zemli-cover {
+    content: url("https://cdn-ec-static.garagemca.org/storage/document/4/5/4558/file-dd87174d-340b-4fe4-9fc6-e789ae5cab0b.gif");
 }
 
-/* Адаптивный дизайн для мобильных устройств */
-:root {
-    --visual-width: 46vw;
+body.dark-theme #narrativnye-strategii-hudozhestvennoj-literatury-cover {
+    content: url("https://cdn-ec-static.garagemca.org/storage/document/4/5/4562/file-40ddb308-ab18-4b59-8407-eed3fabeec84.gif");
 }
 
-.divider-section {
-    max-width: var(--visual-width);
+body.dark-theme #moj-sosed-strizh-cover {
+    content: url("https://cdn-ec-static.garagemca.org/storage/document/4/5/4566/file-c90ae766-6b3f-4078-84c7-d1a6d8770893.gif");
 }
 
-@media (max-width: 768px) {
-    :root {
-        --visual-width: 100%;
-    }
+body.dark-theme #na-drugom-meste-cover {
+    content: url("https://cdn-ec-static.garagemca.org/storage/document/4/5/4570/file-2d3b6af3-6a04-4cc5-b49f-ca11f0b1fe0c.gif");
 }
 
-.logo-animation-wrapper {
-    display: flex;
-    align-items: center;
+body.dark-theme #gde-spit-rybka-cover {
+    content: url("https://cdn-ec-static.garagemca.org/storage/document/4/5/4574/file-e81141ec-a77b-4ea4-9850-cf6848216089.gif");
 }
 
-.logo-animation-wrapper .logo-img, 
-.logo-animation-wrapper .animation-img {
-    height: 40px; /* Фиксируем одинаковую высоту для обоих изображений */
-    width: auto; /* Сохраняем пропорции */
-    mix-blend-mode: multiply;
-    background-color: var(--background-light);
+body.dark-theme #smozhet-li-kino-razglyadet-zhivotnyh-cover {
+    content: url("https://cdn-ec-static.garagemca.org/storage/document/4/5/4578/file-3e3e570b-6c31-4649-a2d3-6554a5971454.gif");
 }
 
-@media (max-width: 768px) {
-    .logo-animation-wrapper {
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
-    }
-
-    .logo-animation-wrapper .logo-img,
-    .logo-animation-wrapper .animation-img {
-        height: 80px; /* Уменьшаем высоту на мобильных устройствах */
-        width: auto;
-    }
+body.dark-theme #vosstanovlenie-podavlennogo-mira-cover {
+    content: url("https://cdn-ec-static.garagemca.org/storage/document/4/5/4582/file-b89bb349-a8a6-49cc-bfbe-6be29e49eb11.gif");
 }
 
-/* Разные изображения для тёмной темы */
 body.dark-theme .divider-1 .divider-img {
     content: url('https://cdn-ec-static.garagemca.org/storage/document/4/5/4556/file-b31851d0-b80e-4725-8a46-d6598d12a4ab.gif');
 }
@@ -469,36 +339,6 @@ body.dark-theme .divider-8 .divider-img {
     content: url('https://cdn-ec-static.garagemca.org/storage/document/4/5/4584/file-4f03f9df-9c4d-4602-9a2f-838ae0fffb44.gif');
 }
 
-/* Мобилка */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column-reverse;
-    }
-
-    .left, .right {
-        width: 100%;
-    }
-
-    .limited-img {
-        width: 70%; /* Изображение на всю ширину */
-        height: auto;
-        align-items: flex-start; /* Выравнивание по левому краю */
-        mix-blend-mode: multiply;
-        background-color: var(--background-light);
-    }
-
-    section {
-        width: 100%; /* Секция на всю ширину */
-        max-width: none; /* Убираем ограничение ширины */
-    }
-
-    section img {
-        width: 100%; /* Изображение на всю ширину секции */
-        height: auto;
-    }
-}
-
-/* Десктоп */
 @media (min-width: 769px) {
     .right img {
         position: fixed;
@@ -515,30 +355,52 @@ body.dark-theme .divider-8 .divider-img {
     }
 }
 
-    section img {
+@media (max-width: 768px) {
+    :root {
+        --visual-width: 100%;
+    }
+
+    .container {
+        flex-direction: column-reverse;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+    }
+
+    .right img {
+        position: static;
         max-width: 100%;
+        height: auto;
+        mix-blend-mode: multiply;
+    }
+
+    .limited-img {
+        width: 70%;
+        height: auto;
+        align-items: flex-start;
+        mix-blend-mode: multiply;
+        background-color: var(--background-light);
+    }
+
+    section {
+        width: 100%;
+        max-width: none;
+    }
+
+    section img {
+        width: 100%;
         height: auto;
     }
 
-    a,
-a:link {
-    color: var(--link-color);
-}
+    address {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-a:visited {
-    color: var(--visited-link-color);
-}
-
-a:hover {
-    opacity: 0.8;
-}
-
-:root {
-    --link-color: #0021F5;
-    --visited-link-color: #551A8B;
-}
-
-body.dark-theme {
-    --link-color: #6B8CFF;
-    --visited-link-color: #9A7BFF;
+    address img {
+        max-width: 100%;
+        margin-top: 20px;
+    }
 }
